@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   
+    <!-- ========css link =============== -->
+    <link rel="stylesheet" href="{% static 'assets/css/contact-style.css' %}">
+        <!-- =================== swipe js====================== -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Hello Africa</title>
+
+
+    
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque eius alias sit, officia id vel distinctio reiciendis qui aut nobis voluptate harum quidem! Dicta qui quibusdam modi reprehenderit doloribus?</p>
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="box" >
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>KN 203st Nyamirambo, <br> Kigali, Nyarugenge,<br> 55060</p>
+                    </div>
+                </div>
+                <div class="box" onclick="openWhatsApp('+250790250425')">
+                    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="text">
+                        <h3>WhatsApp</h3>
+                        <p>+250 790 250 425</p>
+                    </div>
+                </div>
+                <div class="box" onclick="callNumber('+250790250425')">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+250 790 250 425</p>
+                    </div>
+                </div>
+                <div class="box" onclick="sendEmail('hirwacedric123@gmail.com')">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>hirwacedric123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <form action="{% url 'send-message' %}" method="POST" class="contactForm" id="booking-form"   >
+                {% csrf_token %}
+                
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="name" required="required" class="textbx">
+                    <span>Enter Your Full name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" required="required">
+                    <span>Type your Email</span>
+                </div> 
+                <div class="inputBox">
+                    <input type="text" name="phone" required>
+                    <span>Phone</span>
+                </div>
+                <div class="inputBox" >
+                    <textarea name="message" id="" cols="30" rows="6" required></textarea>
+                    <span>Type Your Message .....</span>
+                </div>
+                <div class="inputButton" >
+                    <input  type="submit" value="Send">
+                </div>
+                   
+            </form>
+        </div>
+    </section>
+        <!-- Success Message Card -->
+        <div id="success-card" class="overlay-card">
+            <div class="card-contente">
+                <p>Your Message Has Been Sent Successfully! <br> We will get to you back soon, Thank you for reaching us</p>
+                <a href="{% url 'contact' %}"><button class="okay-btn">Ok</button>
+                </a>
+            </div>
+        </div>
+    
+        <!-- JavaScript to show the success card -->
+        {% include 'footer.html' %}
+    <script>
+        function callNumber(number) {
+            window.location.href = 'tel:' + number;
+        }
+    
+        function openWhatsApp(number) {
+            // If you have a WhatsApp number, the format should be "whatsapp://send?phone=NUMBER"
+            // Replace "NUMBER" with the phone number, removing any spaces or special characters
+            var whatsappURL = 'whatsapp://send?phone=' + number;
+            window.location.href = whatsappURL;
+        }
+    
+        function sendEmail(email) {
+            window.location.href = 'mailto:' + email;
+        }
+
+         // Function to show the success message card
+         function showSuccessCard() {
+                document.getElementById("success-card").style.display = "block";
+            }
+    
+            // Add event listener to the form submission button
+            document.getElementById("booking-form").addEventListener("submit", function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+    
+                // Submit the form using AJAX
+                fetch(this.action, {
+                    method: this.method,
+                    body: new FormData(this)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show the success card if the form was submitted successfully
+                        showSuccessCard();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                });
+            });
+    </script>
+    
+</body>
+</html>

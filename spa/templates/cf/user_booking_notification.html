@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Confirmation</h1>
+        <p>Dear {{ username }},</p>
+        <p>Thank you for booking with us. Your booking details are as follows:</p>
+        <ul>
+            <li><strong>Name:</strong> {{ username }}</li>
+            <li><strong>Email:</strong> {{ useremail }}</li>
+            <li><strong>Phone:</strong> {{ telnumber }}</li>
+            <li><strong>Destination:</strong> {{ destination }}</li>
+            <li><strong>Number of People:</strong> {{ howMany }}</li>
+            <li><strong>Arrival Date:</strong> {{ arrivals }}</li>
+            <li><strong>Additional Message:</strong> {{ bookmessage }}</li>
+        </ul>
+        <p>We look forward to welcoming you!</p>
+    </div>
+</body>
+</html>

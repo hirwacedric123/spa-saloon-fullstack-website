@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notification</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .footer {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 200px; /* Adjust the size as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="path/to/your/logo.png" alt="Hello Africa Logo">
+        </div>
+        <h1>Aspecto SPA New Message from {{ full_name }}</h1>
+        <p><strong>Name:</strong> {{ full_name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Phone:</strong> {{ phone_number }}</p>
+        <p><strong>Message:</strong> {{ message }}</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Hello Africa. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/helloafrica">Facebook</a>
+            <a href="https://twitter.com/helloafrica">Twitter</a>
+            <a href="https://www.instagram.com/helloafrica">Instagram</a>
+        </div>
+    </div>
+</body>
+</html>
