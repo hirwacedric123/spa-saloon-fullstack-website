@@ -38,7 +38,7 @@ def subscribe(request):
             # Send subscription confirmation email
             send_email_to_subscriber(user_email)
             # Send subscription notification to admin
-            send_subscription_notification('aspectospasaloon@gmail.com', user_email)
+            send_subscription_notification('cielomassagespa@gmail.com', user_email)
             return render(request, 'thank_you.html')
     else:
         return JsonResponse({'error': 'Only POST requests are allowed for subscription.'}, status=400)
@@ -46,7 +46,7 @@ def subscribe(request):
 def send_email_to_subscriber(user_email):
     subject = 'Welcome to Our Newsletter!'
     message = 'Thank you for subscribing to our newsletter. Stay tuned for updates!'
-    sender_email = 'aspectospasaloon@gmail.com'  # Use your email address
+    sender_email = 'cielomassagespa@gmail.com'  # Use your email address
     recipient_list = [user_email]
 
     send_mail(subject, message, sender_email, recipient_list)
@@ -54,7 +54,7 @@ def send_email_to_subscriber(user_email):
 def send_subscription_notification(admin_email, subscriber_email):
     subject = 'New Subscriber Notification'
     message = f'A new user has subscribed to the newsletter.\nSubscriber Email: {subscriber_email}'
-    sender_email = 'aspectospasaloon@gmail.com'  # Use your email address
+    sender_email = 'cielomassagespa@gmail.com'  # Use your email address
     recipient_list = [admin_email]
 
     send_mail(subject, message, sender_email, recipient_list)
@@ -86,7 +86,7 @@ def contact_view(request):
             })
             admin_email_text = strip_tags(admin_message)
             admin_email_html = admin_message
-            admin_email = EmailMultiAlternatives(admin_subject, admin_email_text, 'aspectospasaloon@gmail.com', ['aspectospasaloon@gmail.com'])
+            admin_email = EmailMultiAlternatives(admin_subject, admin_email_text, 'cielomassagespa@gmail.com', ['cielomassagespa@gmail.com'])
             admin_email.attach_alternative(admin_email_html, "text/html")
             admin_email.send()
             
@@ -97,7 +97,7 @@ def contact_view(request):
             })
             sender_email_text = strip_tags(sender_message)
             sender_email_html = sender_message
-            sender_email = EmailMultiAlternatives(sender_subject, sender_email_text, 'aspectospasaloon@gmail.com', [email])
+            sender_email = EmailMultiAlternatives(sender_subject, sender_email_text, 'cielomassagespa@gmail.com', [email])
             sender_email.attach_alternative(sender_email_html, "text/html")
             sender_email.send()
             
