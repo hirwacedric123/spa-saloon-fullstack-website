@@ -178,9 +178,7 @@
   <section class="map_section layout_padding-left">
     <!-- map section -->
     <div class="map_container">
-      <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-      </div>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=house number, Cielo Massage SPA, 97 KG 8 Ave, Kigali, Rwanda" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
     </div>
     <!-- end map section -->
   </section>
@@ -220,19 +218,19 @@
             </h6>
             <ul>
               <li class=" active">
-                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="">
-                <a class="" href="about.html">About </a>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
               </li>
-              <li class="">
-                <a class="" href="service.html">Services </a>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}"> services </a>
               </li>
-              <li class="">
-                <a class="" href="specialist.html">Specialists </a>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'specialist' %}">Specialists </a>
               </li>
-              <li class="">
-                <a class="" href="contact.html">Contact Us</a>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -275,15 +273,15 @@
             <div class="info_link-box">
               <a href="">
                 <img src="{% static 'assets/images/location.png' %}" alt="">
-                <span> No.123 Chalingt Gates, loram ipusm</span>
+                <span> house number, 97 KG 8 Ave, Kigali</span>
               </a>
               <a href="">
                 <img src="{% static 'assets/images/call.png' %}" alt="">
-                <span>+01 12345678901</span>
+                <span> +250 788 262 423</span>
               </a>
               <a href="">
                 <img src="{% static 'assets/images/mail.png' %}" alt="">
-                <span> demo123@gmail.com</span>
+                <span> cielomassagespa@gmail.com</span>
               </a>
             </div>
           </div>

@@ -124,6 +124,7 @@ a {
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
   height: 100%;
+  filter: grayscale(1.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,6 +322,7 @@ a:focus {
 
 .slider_section .img-box img {
   width: 100%;
+  filter: grayscale(1.7);
 }
 
 .slider_section #carouselExampleControls {
@@ -438,9 +440,9 @@ a:focus {
 }
 
 .service_section .service_container .box .img-box {
-  width: 125px;
-  height: 135px;
-  display: -webkit-box;
+  width: 280px;
+  align-items: center;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
@@ -449,12 +451,13 @@ a:focus {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 15px; */
 }
 
 .service_section .service_container .box .img-box img {
   max-width: 100%;
   max-height: 100%;
+  filter: grayscale(1.5);
 }
 
 .service_section .service_container .box .detail-box h4 {
@@ -528,6 +531,7 @@ a:focus {
 
 .about_section .box .img-box img {
   width: 100%;
+  filter: grayscale(1.6);
 }
 
 .spl_section {
@@ -557,6 +561,8 @@ a:focus {
 
 .spl_section .spl_container .box .img-box img {
   width: 100%;
+  height: 400px;
+  filter: grayscale(1.6);
 }
 
 .spl_section .spl_container .box .img-box .social_container {
@@ -685,6 +691,7 @@ a:focus {
 
 .health_section .detail-container .detail-box .detail .detail_img-box img {
   max-width: 100%;
+  filter: grayscale(1.6);
 }
 
 .health_section .detail-container .detail-box .detail .text p {
@@ -710,6 +717,7 @@ a:focus {
 
 .health_section .img-box img {
   width: 100%;
+  filter: grayscale(1.6);
 }
 
 .subscribe_section .subscribe_container {
@@ -781,6 +789,7 @@ a:focus {
 
 .subscribe_section .subscribe_container .img-box img {
   width: 100%;
+  filter: grayscale(1.6);
 }
 
 .client_section .heading_container h2::before {
@@ -819,6 +828,7 @@ a:focus {
 
 .client_section .box .client_id .img-box img {
   width: 100%;
+  filter: grayscale();
 }
 
 .client_section .box .client_id .name {
@@ -909,6 +919,7 @@ a:focus {
 
 .contact_section .img-box img {
   width: 100%;
+  filter: grayscale(1.6);
 }
 
 /* end contact section */
