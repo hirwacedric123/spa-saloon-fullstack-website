@@ -129,23 +129,24 @@
 
   <!-- about section -->
 
-  <section class="about_section  layout_padding-left">
+  <section class="about_section layout_padding-left">
     <div class="box">
       <div class="detail-box">
         <div class="heading_container">
-          <h2>
-            About Us
-          </h2>
+          <h2>About Us</h2>
         </div>
         <p>
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using LoremIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+          Welcome to your serene escape, the premier destination for luxurious and rejuvenating massage and spa treatments in Kigali. Conveniently located in the heart of Rwanda, our spa offers a tranquil retreat from the daily grind. Here, you will find a peaceful haven where both your body and mind can experience true relaxation and renewal.
+        </p>
+        <p>
+          <strong>Our Philosophy:</strong> We believe in the profound healing power of touch. Our mission is to enhance your well-being through personalized massage and spa therapies tailored to your unique needs. Whether you're seeking relief from chronic pain, recovery from physical exertion, or simply a moment of pure relaxation, our skilled therapists are here to guide you on your path to wellness.
         </p>
         <a href="">
           Read More
         </a>
       </div>
       <div class="img-box">
-        <img src="{% static 'assets/images/about-img.jpg' %}" alt="">
+        <img src="{% static 'assets/images/about-img.jpg' %}" alt="About Us Image">
       </div>
     </div>
   </section>
@@ -154,20 +155,19 @@
 
 
   <!-- info section -->
-
-  <section class="info_section  layout_padding-left">
+  <section class="info_section layout_padding-left">
     <div class="social_box">
       <a href="">
-        <img src="{% static 'assets/images/facebook-logo-button.png' %}" alt="">
+        <img src="{% static 'assets/images/facebook-logo-button.png' %}" alt="Facebook">
       </a>
       <a href="">
-        <img src="{% static 'assets/images/twitter-logo-button.png' %}" alt="">
+        <img src="{% static 'assets/images/twitter-logo-button.png' %}" alt="Twitter">
       </a>
       <a href="">
-        <img src="{% static 'assets/images/linkedin.png' %}" alt="">
+        <img src="{% static 'assets/images/linkedin.png' %}" alt="LinkedIn">
       </a>
       <a href="https://www.instagram.com/cielo_massage_kigali/">
-        <img src="{% static 'assets/images/instagram.png' %}" alt="">
+        <img src="{% static 'assets/images/instagram.png' %}" alt="Instagram">
       </a>
     </div>
     <div class="info_container layout_padding">
@@ -178,7 +178,7 @@
               About Cielo Massage SPA
             </h6>
             <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u
+              Our mission is to enhance your well-being through personalized massage therapies tailored to your unique needs. Whether you're seeking relief from chronic pain, recovery from physical exertion, or simply a moment of pure relaxation, our skilled therapists are here to guide you on your path to wellness.
             </p>
           </div>
           <div class="col-md-2 offset-lg-1">
@@ -186,20 +186,20 @@
               Menus
             </h6>
             <ul>
-              <li class=" active">
-                <a class="" href="/">Home <span class="sr-only">(current)</span></a>
+              <li class="active">
+                <a href="/">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}"> About</a>
+              <li>
+                <a href="{% url 'about' %}">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'service' %}"> services </a>
+              <li>
+                <a href="{% url 'service' %}">Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'specialist' %}">Specialists </a>
+              <li>
+                <a href="{% url 'specialist' %}">Specialists</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              <li>
+                <a href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -209,28 +209,13 @@
             </h6>
             <ul>
               <li>
-                <a href="">
-                  Adipiscing
+                <a href="https://www.instagram.com/cielo_massage_kigali/" target="_blank">
+                  Instagram
                 </a>
               </li>
               <li>
                 <a href="">
-                  Elit, sed
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  do Eiusmod
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Tempor
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  incididunt
+                  Google Account
                 </a>
               </li>
             </ul>
@@ -241,15 +226,15 @@
             </h6>
             <div class="info_link-box">
               <a href="">
-                <img src="{% static 'assets/images/location.png' %}" alt="">
-                <span> house number, 97 KG 8 Ave, Kigali</span>
+                <img src="{% static 'assets/images/location.png' %}" alt="Location">
+                <span> House number, 97 KG 8 Ave, Kigali</span>
               </a>
               <a href="">
-                <img src="{% static 'assets/images/call.png' %}" alt="">
-                <span>+250 788 262 423</span>
+                <img src="{% static 'assets/images/call.png' %}" alt="Call">
+                <span> +250 788 262 423</span>
               </a>
               <a href="">
-                <img src="{% static 'assets/images/mail.png' %}" alt="">
+                <img src="{% static 'assets/images/mail.png' %}" alt="Mail">
                 <span> cielomassagespa@gmail.com</span>
               </a>
             </div>
@@ -274,7 +259,7 @@
         <a href="">
           <img src="{% static 'assets/images/linkedin.png' %}" alt="">
         </a>
-        <a href="https://www.instagram.com/cielo_massage_kigali/">
+        <a href="">
           <img src="{% static 'assets/images/instagram.png' %}" alt="">
         </a>
       </div>

@@ -129,7 +129,7 @@
 
   <!-- contact section -->
 
-  <section class="contact_section layout_padding layout_padding-left">
+  <section class="contact_section layout_padding-bottom layout_padding-left">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -139,20 +139,21 @@
       <div class="">
         <div class="row">
           <div class="col-md-6 ">
-            <form action="">
+            <form method="POST" action="{% url 'contact_view' %}" id="booking-form">
+              {% csrf_token %}
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Full Name" />
+                    <input type="text" name="full_name" placeholder="Full Name"  required />
                   </div>
                   <div>
-                    <input type="email" placeholder="Email " />
+                    <input type="email" name="email" placeholder="Email " required />
                   </div>
                   <div>
-                    <input type="text" placeholder="Phone Number" />
+                    <input type="text" name="phone_number" placeholder="Phone Number" required />
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Message" class="message_input" />
+                    <input type="text" name="message" placeholder="Message" class="message_input" required />
                   </div>
                   <div class=" ">
                     <button type="submit">
@@ -185,20 +186,19 @@
 
 
   <!-- info section -->
-
-  <section class="info_section  layout_padding-left">
+  <section class="info_section layout_padding-left">
     <div class="social_box">
       <a href="">
-        <img src="{% static 'assets/images/facebook-logo-button.png' %}" alt="">
+        <img src="{% static 'assets/images/facebook-logo-button.png' %}" alt="Facebook">
       </a>
       <a href="">
-        <img src="{% static 'assets/images/twitter-logo-button.png' %}" alt="">
+        <img src="{% static 'assets/images/twitter-logo-button.png' %}" alt="Twitter">
       </a>
       <a href="">
-        <img src="{% static 'assets/images/linkedin.png' %}" alt="">
+        <img src="{% static 'assets/images/linkedin.png' %}" alt="LinkedIn">
       </a>
       <a href="https://www.instagram.com/cielo_massage_kigali/">
-        <img src="{% static 'assets/images/instagram.png' %}" alt="">
+        <img src="{% static 'assets/images/instagram.png' %}" alt="Instagram">
       </a>
     </div>
     <div class="info_container layout_padding">
@@ -209,7 +209,7 @@
               About Cielo Massage SPA
             </h6>
             <p>
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u
+              Our mission is to enhance your well-being through personalized massage therapies tailored to your unique needs. Whether you're seeking relief from chronic pain, recovery from physical exertion, or simply a moment of pure relaxation, our skilled therapists are here to guide you on your path to wellness.
             </p>
           </div>
           <div class="col-md-2 offset-lg-1">
@@ -217,20 +217,20 @@
               Menus
             </h6>
             <ul>
-              <li class=" active">
-                <a class="" href="/">Home <span class="sr-only">(current)</span></a>
+              <li class="active">
+                <a href="/">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}"> About</a>
+              <li>
+                <a href="{% url 'about' %}">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'service' %}"> services </a>
+              <li>
+                <a href="{% url 'service' %}">Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'specialist' %}">Specialists </a>
+              <li>
+                <a href="{% url 'specialist' %}">Specialists</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              <li>
+                <a href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -240,28 +240,13 @@
             </h6>
             <ul>
               <li>
-                <a href="">
-                  Adipiscing
+                <a href="https://www.instagram.com/cielo_massage_kigali/" target="_blank">
+                  Instagram
                 </a>
               </li>
               <li>
                 <a href="">
-                  Elit, sed
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  do Eiusmod
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  Tempor
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  incididunt
+                  Google Account
                 </a>
               </li>
             </ul>
@@ -272,15 +257,15 @@
             </h6>
             <div class="info_link-box">
               <a href="">
-                <img src="{% static 'assets/images/location.png' %}" alt="">
-                <span> house number, 97 KG 8 Ave, Kigali</span>
+                <img src="{% static 'assets/images/location.png' %}" alt="Location">
+                <span> House number, 97 KG 8 Ave, Kigali</span>
               </a>
               <a href="">
-                <img src="{% static 'assets/images/call.png' %}" alt="">
+                <img src="{% static 'assets/images/call.png' %}" alt="Call">
                 <span> +250 788 262 423</span>
               </a>
               <a href="">
-                <img src="{% static 'assets/images/mail.png' %}" alt="">
+                <img src="{% static 'assets/images/mail.png' %}" alt="Mail">
                 <span> cielomassagespa@gmail.com</span>
               </a>
             </div>
@@ -305,7 +290,7 @@
         <a href="">
           <img src="{% static 'assets/images/linkedin.png' %}" alt="">
         </a>
-        <a href="https://www.instagram.com/cielo_massage_kigali/">
+        <a href="">
           <img src="{% static 'assets/images/instagram.png' %}" alt="">
         </a>
       </div>

@@ -104,24 +104,9 @@
                     <a class="nav-link" href="{% url 'contact' %}">">Contact Us</a>
                   </li>
                 </ul>
-                <div class="user_option ">
-                  <a href="">
-                    Login
-                  </a>
-                  <form class="form-inline ">
-                    <button class="btn   nav_search-btn" type="submit"></button>
-                  </form>
-                </div>
               </div>
             </div>
-            <div class="user_option user_option-lg">
-              <a href="">
-                Login
-              </a>
-              <form class="form-inline ">
-                <button class="btn   nav_search-btn" type="submit"></button>
-              </form>
-            </div>
+
           </nav>
         </div>
       </header>
@@ -282,7 +267,7 @@
 
   <!-- end about section -->
 
-  <!-- spl section -->
+  <!-- Services  -->
 
   <section class="spl_section layout_padding layout_padding-left">
     <div class="container">
@@ -296,7 +281,7 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'assets/images/b3.jpeg' %}" alt="">
+              <img src="{% static 'assets/images/relaxing-massage.jpg' %}" alt="">
               <div class="social_container">
                 <div class="social-box">
                   <h1>Price: 25K RWF</h1>
@@ -312,7 +297,7 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'assets/images/s-5.jpeg' %}" alt="">
+              <img src="{% static 'assets/images/deep-tiss.jpeg' %}" alt="">
               <div class="social_container">
                 <div class="social-box">
                   <h1>Price: 30K RWF</h1>
@@ -344,7 +329,7 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'assets/images/sj.jpeg' %}" alt="">
+              <img src="{% static 'assets/images/body-scrub.jpg' %}" alt="">
               <div class="social_container">
                 <div class="social-box">
                   <h1>Price: 40K RWF</h1>
@@ -376,7 +361,7 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'assets/images/sj.jpeg' %}" alt="">
+              <img src="{% static 'assets/images/nuru-4.jpeg' %}" alt="">
               <div class="social_container">
                 <div class="social-box">
                   <h1>Price: 100K RWF</h1>
@@ -709,7 +694,7 @@
       </p>
     </div>
   </footer>
-  <p>heloo</p>
+  
   <!-- footer section -->
 
 
@@ -736,31 +721,6 @@
         items: 3
       });
   
-        // Function to show the success message card
-      function showSuccessCard() {
-          document.getElementById("success-card").style.display = "block";
-      }
-  
-      // Add event listener to the form submission button
-      document.getElementById("booking-form").addEventListener("submit", function(event) {
-          // Prevent the default form submission behavior
-          event.preventDefault();
-  
-          // Submit the form using AJAX
-          fetch(this.action, {
-              method: this.method,
-              body: new FormData(this)
-          })
-          .then(response => {
-              if (response.ok) {
-                  // Show the success card if the form was submitted successfully
-                  showSuccessCard();
-              }
-          })
-          .catch(error => {
-              console.error('Error submitting form:', error);
-          });
-      });
     </script>
    
 
