@@ -716,6 +716,51 @@
   <script src="{% static 'assets/js/bootstrap.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
+    <script>
+      var nav = $(".custom_sidenav-container ");
+      var btn = $(".custom_menu-btn");
+      btn.click
+      btn.click(function (e) {
+        e.preventDefault();
+        nav.toggleClass("lg_nav-toggle");
+        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+      });
+      $(".owl-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 20,
+        autoHeight: true,
+        nav: true,
+        autoWidth: true,
+        items: 3
+      });
+  
+        // Function to show the success message card
+      function showSuccessCard() {
+          document.getElementById("success-card").style.display = "block";
+      }
+  
+      // Add event listener to the form submission button
+      document.getElementById("booking-form").addEventListener("submit", function(event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+  
+          // Submit the form using AJAX
+          fetch(this.action, {
+              method: this.method,
+              body: new FormData(this)
+          })
+          .then(response => {
+              if (response.ok) {
+                  // Show the success card if the form was submitted successfully
+                  showSuccessCard();
+              }
+          })
+          .catch(error => {
+              console.error('Error submitting form:', error);
+          });
+      });
+    </script>
 
 
 
