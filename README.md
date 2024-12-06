@@ -19,10 +19,7 @@ A modern, feature-rich SPA salon website with an elegant design, built using **H
 
 ---
 
-### Screenshots  
-> *Add screenshots or GIFs of the website showing its features.*  
 
----
 
 ### Technologies Used  
 #### Frontend:  
