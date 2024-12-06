@@ -120,7 +120,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Contact  
 For questions or suggestions, reach out:  
-- **Your Name**: [hirwacedr12@gmail.com.com](mailto:your-email@example.com)  
+- **Your Name**: [hirwacedr12@gmail.com.com](mailto:hirwacedr12@gmail.com)  
 - **GitHub**: [github.com/your-username](https://github.com/your-username)  
 
 ---
