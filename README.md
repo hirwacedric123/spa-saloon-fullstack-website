@@ -1,4 +1,3 @@
-Here’s a detailed README file tailored for a **SPA Salon Website** using **HTML, CSS, Bootstrap, JavaScript (frontend)** and **Django (backend)** with features like sending emails:
 
 ---
 
