@@ -126,9 +126,7 @@ For questions or suggestions, reach out:
 ---
 
 ### Example Preview  
-> *Include a live demo link if hosted, e.g., via PythonAnywhere or Render.*  
 [Live Demo](https://cielomassagespa.com/)  
 
 ---
 
-Would you like help adding placeholders for screenshots, setting up email functionality, or structuring your project?
